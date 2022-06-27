@@ -201,10 +201,6 @@ if link != 'default':
 cc_version = str(read_first_line(env['CC'].split() + ['--version']))
 cxx_version = str(read_first_line(env['CXX'].split() + ['--version']))
 
-if python_ver >= 3:
-    cc_version = cc_version.decode()
-    cxx_version = cxx_version.decode()
-
 print('Using C compiler executable: ' + env['CC'])
 print('C compiler version is: ' + cc_version)
 print('Using C++ compiler executable: ' + env['CXX'])
